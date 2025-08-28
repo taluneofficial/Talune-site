@@ -1,131 +1,74 @@
-# Re-create the HTML file after code execution environment reset.
-
-html_code = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talune | Ethereal Pop</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Georgia', serif;
-            background: linear-gradient(to bottom, #f6f6f6, #d6cfe6);
-            color: #2d2d2d;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tialian | Retro Airy Pop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(180deg, #fde2e4, #e0c3fc, #f9f7d9);
+      color: #2e2e2e;
+      text-align: center;
+    }
 
-        header {
-            background: #a487a9;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
+    /* Hero Section */
+    .hero {
+      padding: 120px 20px 80px;
+      background: url('https://www.transparenttextures.com/patterns/paper-fibers.png'), 
+                  linear-gradient(180deg, #ffe8d6, #f0d1f5, #fff5d7);
+      background-blend-mode: multiply;
+    }
 
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-            letter-spacing: 2px;
-        }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      font-weight: 700;
+      color: #2a1a3f;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-shadow: 2px 2px #f7c59f, -2px -2px #c4b5fd;
+    }
 
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-            font-style: italic;
-        }
+    .hero p {
+      font-size: 1.4rem;
+      margin: 10px auto 30px;
+      font-style: italic;
+      color: #5b3a70;
+    }
 
-        .section {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-        }
+    .cta-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 28px;
+      background: #2a1a3f;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
 
-        .section h2 {
-            margin-bottom: 20px;
-            font-size: 1.8em;
-        }
+    .cta-buttons a:hover {
+      background: #5b3a70;
+      transform: scale(1.05);
+    }
 
-        .links a {
-            display: inline-block;
-            margin: 10px 15px;
-            padding: 10px 20px;
-            background-color: #a487a9;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+    /* Section Styles */
+    section {
+      padding: 60px 20px;
+    }
 
-        .newsletter input[type="email"] {
-            padding: 10px;
-            width: 60%;
-            margin-top: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #2a1a3f;
+      margin-bottom: 20px;
+    }
 
-        .newsletter button {
-            padding: 10px 20px;
-            background-color: #2d2d2d;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            margin-left: 10px;
-        }
-
-        footer {
-            background-color: #2d2d2d;
-            color: white;
-            text-align: center;
-            padding: 20px 10px;
-            font-size: 0.9em;
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>TALUNE</h1>
-    <p>ethereal pop from the other side</p>
-    <p>⋆ healing through sound ⋆ new music soon ⋆</p>
-</header>
-
-<div class="section">
-    <h2>About</h2>
-    <p>
-        Talune crafts soft, celestial pop infused with spiritual energy and feminine healing.<br>
-        Her sound lives between worlds: dreamlike melodies, intimate lyrics, and sonic moonlight.<br><br>
-        New music coming soon — follow the journey.
-    </p>
-</div>
-
-<div class="section links">
-    <h2>Listen & Connect</h2>
-    <a href="#" target="_blank">Spotify</a>
-    <a href="#" target="_blank">YouTube</a>
-    <a href="#" target="_blank">Instagram</a>
-    <a href="#" target="_blank">TikTok</a>
-</div>
-
-<div class="section newsletter">
-    <h2>Stay in the Loop</h2>
-    <p>Want updates from the other side? Drop your email below ✨</p>
-    <input type="email" placeholder="Your email">
-    <button>Subscribe</button>
-</div>
-
-<footer>
-    © 2025 Talune. All rights reserved. <br>
-    designed with love + moonlight
-</footer>
-
-</body>
-</html>
-"""
-
-# Save the HTML content to a file
-file_path = "/mnt/data/talune_landing_page.html"
-with open(file_path, "w") as f:
-    f.write(html_code)
-
-file_path
+    .music img {
+      max-width: 300px;
+      border-radius
